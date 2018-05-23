@@ -1,5 +1,7 @@
 // Find the maximum
-
+  function maxOfTwoNumbers(a, b) {
+    return Math.max(a, b);
+  }
 // Finding Longest Word
 var words = [
   'mystery',
@@ -10,14 +12,37 @@ var words = [
   'orchard',
   'crackpot'
 ];
+function findLongestWord(words){
+var longestword = words[0];
+var currentMax = words[0].length;
+for(var i=0;i<words.length;i++){
+  if(words[i].length>=currentMax){
+    currentMax=words[i].length;
+    longestword=words[i];
+  } 
+}
+return longestword;
+}
 
-// Calculating a Sum
 
+//Calculating a Sum
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function sumArray(numbers){
+var sum = 0;
+for(i=1;i<numbers.length;i++){
+  sum+=numbers[i];
+}
+return sum}
 
-// Calculate the Average
-
+//Calculate the Average
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function averageNumbers(numbersAvg){
+var sum=0;
+for(i=0;i<numbersAvg.length;i++){
+sum+=numbersAvg[i];
+}
+return sum/numbersAvg.length;
+}
 
 // Array of Strings
 var wordsArr = [
@@ -32,6 +57,12 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
+function averageWordLength(wordsArr){
+  var sum=0;
+  for(i=0;i<wordsArr.length;i++)
+    sum+=wordsArr[i].length;
+  return sum/wordsArr.length;
+}
 
 // Unique Arrays
 var wordsUnique = [
@@ -47,6 +78,18 @@ var wordsUnique = [
   'simple',
   'bring'
 ];
+function uniquifyArray(wordsUnique,word){
+  
+if (wordsUnique.indexOf(word) === -1) {
+    wordsUnique.push(word);
+      console.log("words unique is :" + wordsUnique);
+    } 
+    else if (wordsUnique.indexOf(word) > -1) {
+    console.log(word + "already exists in the array");
+    }
+
+
+}
 
 // Finding Elements
 var wordsFind = [
@@ -59,6 +102,18 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+function doesWordExist(wordsFind,word){
+  var found;
+  for (i = 0; i < wordsFind.length; i++) {
+		if (word == wordsFind[i]) {
+			found = true;
+		}
+	}
+
+	if (found === true) return true;
+	else return false;
+}
+
 
 // Counting Repetion
 var wordsCount = [
@@ -74,6 +129,16 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes(wordsCount){
+  var count=0;
+  for(i=0;i<wordsCount.length;i++){
+    if(wordsCount==word) {
+      count++;
+    }
+  }
+return count;
+}
 // Bonus Quest
 
 var matrix = [
